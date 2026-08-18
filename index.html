@@ -405,6 +405,10 @@ details .ans{overflow:hidden;color:var(--ink-soft);padding:0 30px 20px 2px;anima
   display:flex;
   flex-direction:column;
   overflow:hidden;
+  opacity:1!important;
+  transform:none;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
   transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .45s ease;
 }
 .vcard:hover{
@@ -425,11 +429,16 @@ details .ans{overflow:hidden;color:var(--ink-soft);padding:0 30px 20px 2px;anima
   background:#E6F2F0;
   cursor:pointer;
   flex-shrink:0;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
 }
 .vcard-media img{
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
   transition:transform .75s var(--ease);
 }
 .vcard:hover .vcard-media img{
@@ -954,12 +963,12 @@ footer a{color:#8CE8DF;text-decoration:none}
     </div>
   </div>
 
-  <div class="story-slider-wrap">
+  <div class="story-slider-wrap rv">
     <div class="story-slider" id="storySlider">
       <!-- Card 1: Отзыв Павла (Telegram + фото) -->
-      <div class="vcard rv" data-index="0">
+      <div class="vcard" data-index="0">
         <div class="vcard-media" onclick="openLightbox('img/images3.jpg', 'Павел с сыном на водопаде (остров Бохол)')">
-          <img src="img/images3-thumb.jpg" alt="Павел с сыном на водопаде на острове Бохол" loading="lazy" decoding="async">
+          <img src="img/images3-thumb.jpg" alt="Павел с сыном на водопаде на острове Бохол">
           <div class="vcard-badge"><span class="pulse-dot"></span> Отзыв из Telegram</div>
           <button class="zoom-btn" type="button" aria-label="Увеличить фото"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
           <div class="media-overlay">
@@ -990,9 +999,9 @@ footer a{color:#8CE8DF;text-decoration:none}
       </div>
 
       <!-- Card 2: Что сделал (Реализация + фото дома/бассейна) -->
-      <div class="vcard rv" data-index="1">
+      <div class="vcard" data-index="1">
         <div class="vcard-media" id="card2Media" onclick="openLightbox('img/images.jpg', '2-этажный дом на Панглао')">
-          <img id="card2MediaImg" src="img/images.jpg" alt="2-этажный дом на Панглао" loading="lazy" decoding="async">
+          <img id="card2MediaImg" src="img/images.jpg" alt="2-этажный дом на Панглао">
           <button class="zoom-btn" type="button" aria-label="Увеличить фото"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
           <div class="media-tabs" onclick="event.stopPropagation()">
             <button class="media-tab-btn active" type="button" onclick="switchCard2Photo(event, 'img/images.jpg', '2-этажный дом на Панглао', this)">Дом</button>
@@ -1018,7 +1027,7 @@ footer a{color:#8CE8DF;text-decoration:none}
       </div>
 
       <!-- Card 3: Запрос и Результат (ТОЛЬКО ТЕКСТ БЕЗ КАРТИНКИ) -->
-      <div class="vcard text-only-card rv" data-index="2">
+      <div class="vcard text-only-card" data-index="2">
         <div class="case-header-panel">
           <div class="case-badge-row">
             <span class="case-badge-pill">📋 Разбор кейса</span>
