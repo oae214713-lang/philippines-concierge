@@ -40,6 +40,8 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 img{display:block;max-width:100%}
+picture{display:block;width:100%;height:100%}
+picture > img{width:100%;height:100%;object-fit:cover}
 a{color:inherit}
 h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0 0 .5em}
 h1{font-size:clamp(29px,7.2vw,62px);font-weight:800}
@@ -774,8 +776,10 @@ footer a{color:#8CE8DF;text-decoration:none}
 <header class="hero">
   <div class="hero-media">
     <picture>
+      <source media="(min-width:760px)" type="image/webp" srcset="img/hero-desktop.webp">
       <source media="(min-width:760px)" srcset="img/hero-desktop.jpg">
-      <img src="img/hero-mobile.jpg" alt="Дом у моря на Филиппинах">
+      <source type="image/webp" srcset="img/hero-mobile.webp">
+      <img src="img/hero-mobile.jpg" alt="Дом у моря на Филиппинах" fetchpriority="high">
     </picture>
   </div>
   <div class="hero-inner">
@@ -840,27 +844,27 @@ footer a{color:#8CE8DF;text-decoration:none}
     </div>
     <div class="grid" style="margin-top:30px">
       <article class="pcard rv-z">
-        <div class="ph"><span class="num">1</span><img src="img/rental.jpg" alt="Квартира с видом на море"></div>
+        <div class="ph"><span class="num">1</span><picture><source type="image/webp" srcset="img/rental.webp"><img src="img/rental.jpg" alt="Квартира с видом на море" loading="lazy" decoding="async"></picture></div>
         <div class="body"><h3>Жильё</h3><p>Подбираю варианты под бюджет и район, проверяю на скам, торгуюсь и согласую условия до твоего приезда.</p></div>
       </article>
       <article class="pcard rv-z" style="transition-delay:.1s">
-        <div class="ph"><span class="num">2</span><img src="img/money.jpg" alt="Филиппинские песо и телефон"></div>
+        <div class="ph"><span class="num">2</span><picture><source type="image/webp" srcset="img/money.webp"><img src="img/money.jpg" alt="Филиппинские песо и телефон" loading="lazy" decoding="async"></picture></div>
         <div class="body"><h3>Деньги и карты</h3><p>Помогу оформить зарубежную карту, расскажу как снимать без грабительских комиссий, чем платить и где менять.</p></div>
       </article>
       <article class="pcard rv-z" style="transition-delay:.2s">
-        <div class="ph"><span class="num">3</span><img src="img/airport.jpg" alt="Прилёт в аэропорт"></div>
+        <div class="ph"><span class="num">3</span><picture><source type="image/webp" srcset="img/airport.webp"><img src="img/airport.jpg" alt="Прилёт в аэропорт" loading="lazy" decoding="async"></picture></div>
         <div class="body"><h3>Прилёт и заселение</h3><p>Пошагово: что говорить на паспортном контроле, как добраться, что сделать в первые часы. Встреча — по желанию.</p></div>
       </article>
       <article class="pcard rv-z">
-        <div class="ph"><span class="num">4</span><img src="img/transport.jpg" alt="Трайсикл на дороге у моря"></div>
+        <div class="ph"><span class="num">4</span><picture><source type="image/webp" srcset="img/transport.webp"><img src="img/transport.jpg" alt="Трайсикл на дороге у моря" loading="lazy" decoding="async"></picture></div>
         <div class="body"><h3>Транспорт</h3><p>Такси, аренда байка, трициклы и сколько это реально стоит, без «туристических» тарифов.</p></div>
       </article>
       <article class="pcard rv-z" style="transition-delay:.1s">
-        <div class="ph"><span class="num">5</span><img src="img/online.jpg" alt="Ноутбук на террасе с видом на океан"></div>
+        <div class="ph"><span class="num">5</span><picture><source type="image/webp" srcset="img/online.webp"><img src="img/online.jpg" alt="Ноутбук на террасе с видом на океан" loading="lazy" decoding="async"></picture></div>
         <div class="body"><h3>Связь и работа</h3><p>Сим-карта, тарифы, где реально быстрый интернет, коворкинги и кафе, в которых можно работать весь день.</p></div>
       </article>
       <article class="pcard rv-z" style="transition-delay:.2s">
-        <div class="ph"><span class="num">6</span><img src="img/bay.jpg" alt="Бухта с островами"></div>
+        <div class="ph"><span class="num">6</span><picture><source type="image/webp" srcset="img/bay.webp"><img src="img/bay.jpg" alt="Бухта с островами" loading="lazy" decoding="async"></picture></div>
         <div class="body"><h3>Досуг и острова</h3><p>Куда съездить на выходные, что стоит своих денег, а что — развод для туристов.</p></div>
       </article>
     </div>
@@ -892,7 +896,12 @@ footer a{color:#8CE8DF;text-decoration:none}
 </section>
 
 <section class="band">
-  <div class="band-media" id="bandMedia"><img src="img/bay.jpg" alt="Острова и бирюзовая вода"></div>
+  <div class="band-media" id="bandMedia">
+    <picture>
+      <source type="image/webp" srcset="img/bay.webp">
+      <img src="img/bay.jpg" alt="Острова и бирюзовая вода" loading="lazy" decoding="async">
+    </picture>
+  </div>
   <div class="wrap narrow">
     <div class="eyebrow" style="color:#8CE8DF">Комьюнити</div>
     <h2>Заселишься — и сразу попадёшь в своё комьюнити</h2>
@@ -927,7 +936,7 @@ footer a{color:#8CE8DF;text-decoration:none}
       <!-- Card 1: Отзыв Павла (Telegram + фото) -->
       <div class="vcard rv" data-index="0">
         <div class="vcard-media" onclick="openLightbox('img/images3.jpg', 'Павел с сыном на водопаде (остров Бохол)')">
-          <img src="img/images3-thumb.jpg" alt="Павел с сыном на водопаде на острове Бохол" loading="lazy">
+          <img src="img/images3-thumb.jpg" alt="Павел с сыном на водопаде на острове Бохол" loading="lazy" decoding="async">
           <div class="vcard-badge"><span class="pulse-dot"></span> Отзыв из Telegram</div>
           <button class="zoom-btn" type="button" aria-label="Увеличить фото"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
           <div class="media-overlay">
@@ -960,7 +969,7 @@ footer a{color:#8CE8DF;text-decoration:none}
       <!-- Card 2: Что сделал (Реализация + фото дома/бассейна) -->
       <div class="vcard rv" data-index="1">
         <div class="vcard-media" id="card2Media" onclick="openLightbox('img/images.jpg', '2-этажный дом на Панглао')">
-          <img id="card2MediaImg" src="img/images.jpg" alt="2-этажный дом на Панглао" loading="lazy">
+          <img id="card2MediaImg" src="img/images.jpg" alt="2-этажный дом на Панглао" loading="lazy" decoding="async">
           <button class="zoom-btn" type="button" aria-label="Увеличить фото"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
           <div class="media-tabs" onclick="event.stopPropagation()">
             <button class="media-tab-btn active" type="button" onclick="switchCard2Photo(event, 'img/images.jpg', '2-этажный дом на Панглао', this)">Дом</button>
@@ -1083,7 +1092,10 @@ footer a{color:#8CE8DF;text-decoration:none}
   <div class="wrap">
     <div class="about">
       <div class="about-avatar rv-l">
-        <img src="img/konstantin.jpg" alt="Константин — консьерж на Филиппинах">
+        <picture>
+          <source type="image/webp" srcset="img/konstantin.webp">
+          <img src="img/konstantin.jpg" alt="Константин — консьерж на Филиппинах" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="rv-r">
         <div class="eyebrow">Обо мне</div>
@@ -1096,7 +1108,12 @@ footer a{color:#8CE8DF;text-decoration:none}
 </section>
 
 <section class="final">
-  <div class="final-media"><img src="img/hero-desktop.jpg" alt="Дом у моря"></div>
+  <div class="final-media">
+    <picture>
+      <source type="image/webp" srcset="img/hero-desktop.webp">
+      <img src="img/hero-desktop.jpg" alt="Дом у моря" loading="lazy" decoding="async">
+    </picture>
+  </div>
   <div class="wrap">
     <h2 class="rv">Напиши — и приезжай спокойно</h2>
     <p class="rv">Расскажи город и даты. Скажу честно, реально ли уложиться в твой бюджет и что тебя ждёт на месте.</p>
