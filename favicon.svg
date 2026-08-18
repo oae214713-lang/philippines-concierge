@@ -1,21 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <defs>
-    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFE043"/>
-      <stop offset="100%" stop-color="#FF9500"/>
+    <linearGradient id="sun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD600"/>
+      <stop offset="100%" stop-color="#FF9100"/>
     </linearGradient>
   </defs>
-  <!-- 8 Sun Rays -->
-  <g stroke="url(#sunGrad)" stroke-width="5" stroke-linecap="round">
-    <line x1="32" y1="7" x2="32" y2="15"/>
-    <line x1="32" y1="49" x2="32" y2="57"/>
-    <line x1="7" y1="32" x2="15" y2="32"/>
-    <line x1="49" y1="32" x2="57" y2="32"/>
-    <line x1="14.3" y1="14.3" x2="20" y2="20"/>
-    <line x1="44" y1="44" x2="49.7" y2="49.7"/>
-    <line x1="14.3" y1="49.7" x2="20" y2="44"/>
-    <line x1="44" y1="20" x2="49.7" y2="14.3"/>
-  </g>
-  <!-- Sun Core -->
-  <circle cx="32" cy="32" r="14.5" fill="url(#sunGrad)"/>
+  <!-- Heroicons Professional Solid Sun -->
+  <path fill="url(#sun)" fill-rule="evenodd" clip-rule="evenodd" d="M16 3a1.25 1.25 0 0 1 1.25 1.25v2.5a1.25 1.25 0 0 1-2.5 0v-2.5A1.25 1.25 0 0 1 16 3Zm-6 13a6 6 0 1 1 12 0 6 6 0 0 1-12 0Zm15.192-7.778a1.25 1.25 0 0 0-1.768-1.768l-1.768 1.768a1.25 1.25 0 1 0 1.768 1.768l1.768-1.768ZM29 16a1.25 1.25 0 0 1-1.25 1.25h-2.5a1.25 1.25 0 0 1 0-2.5h2.5A1.25 1.25 0 0 1 29 16Zm-5.344 9.192a1.25 1.25 0 0 0 1.768-1.768l-1.768-1.768a1.25 1.25 0 1 0-1.768 1.768l1.768 1.768ZM16 25.25a1.25 1.25 0 0 1 1.25 1.25v2.5a1.25 1.25 0 0 1-2.5 0v-2.5a1.25 1.25 0 0 1 1.25-1.25Zm-7.424-1.826a1.25 1.25 0 0 0-1.768-1.768l-1.768 1.768a1.25 1.25 0 0 0 1.768 1.768l1.768-1.768ZM6.75 16a1.25 1.25 0 0 1-1.25 1.25H3a1.25 1.25 0 0 1 0-2.5h2.5A1.25 1.25 0 0 1 6.75 16Zm1.826-7.424a1.25 1.25 0 0 0 1.768-1.768L8.576 5.04a1.25 1.25 0 0 0-1.768 1.768l1.768 1.768Z"/>
 </svg>
