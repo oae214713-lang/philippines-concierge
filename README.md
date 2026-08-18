@@ -20,20 +20,14 @@
 ```
 
 ## 🌐 Публикация на GitHub Pages
-1. Создайте репозиторий на GitHub и загрузите файлы проекта:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: Philippines concierge landing"
-   git branch -M main
-   git remote add origin https://github.com/<ваш-логин>/<имя-репозитория>.git
-   git push -u origin main
-   ```
+1. Репозиторий проекта:
+   [github.com/oae214713-lang/philippines-concierge](https://github.com/oae214713-lang/philippines-concierge)
 2. В репозитории на GitHub перейдите в **Settings** → **Pages**.
 3. В секции **Build and deployment** выберите:
    - **Source:** Deploy from a branch
    - **Branch:** `main` / `/ (root)`
-4. Нажмите **Save**. Сайт будет доступен через 1-2 минуты по адресу `https://<ваш-логин>.github.io/<имя-репозитория>/`.
+4. Нажмите **Save**. Сайт будет доступен через 1-2 минуты по адресу:
+   👉 **`https://oae214713-lang.github.io/philippines-concierge/`**
 
 ## 💬 Контакты
 - Telegram: [@nexinsight](https://t.me/nexinsight)
